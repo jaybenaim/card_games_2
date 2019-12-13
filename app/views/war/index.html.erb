@@ -1,0 +1,11 @@
+<div class="card-container">
+  <div id="card">
+    <div>
+      <% @cards.shuffle %>
+
+      <span class="card-suite" id="{suiteColor}"><%= @cards.shift %> </span>
+      <span class="card-rank"> </span>
+    </div>
+    <div class="card-image"></div>
+  </div>
+</div>

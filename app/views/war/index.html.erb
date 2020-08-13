@@ -1,11 +1,12 @@
 <div class="card-container">
   <div id="card">
     <div>
-      <% @cards.shuffle %>
-
-      <span class="card-suite" id="{suiteColor}"><%= @cards.shift %> </span>
-      <span class="card-rank"> </span>
+      <span class="card-rank"><%= @rank %></span>
+      <span class="card-suite" id="<%= @color %>"><%= @suite %> </span>
     </div>
     <div class="card-image"></div>
   </div>
 </div>
+<a class="btn btn-outline-primary" href="http://localhost:3000/war">
+  Draw
+</a>

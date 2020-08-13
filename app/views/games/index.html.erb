@@ -14,18 +14,24 @@
 
   <tbody>
     <% @games.each do |game| %>
-      <tr>
-        <td><%= game.score %></td>
-        <td><%= game.name %></td>
-        <td><%= image_tag game.picture_url, width: '100%' if game.picture.present? %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= game.score %></td>
+      <td><%= game.name %></td>
+      <td>
+        <%= image_tag game.picture_url, width: '100%' if game.picture.present?
+        %>
+      </td>
+      <td><%= link_to 'Show', game %></td>
+      <td><%= link_to 'Edit', edit_game_path(game) %></td>
+      <td>
+        <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you
+        sure?' } %>
+      </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<br />
 
 <%= link_to 'New Game', new_game_path %>
